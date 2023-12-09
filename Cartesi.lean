@@ -124,12 +124,12 @@ partial def finish [Deserialize t] (status: Status) : IO (Request t) := do
   match req with
   | Except.error e => throw (IO.userError e)
   | Except.ok res  =>
-    match JSON.parse res.body with
-    | none     => finish status
-    | some res =>
-      match Request.classify res with
-      | some res => pure res
-      | none     => finish status
+    if res.statusCode == Requests.HttpStatusCode.accepted
+      then finish status
+      else match JSON.parse res.body >>= Request.classify with
+           | none     => finish status
+           | some res => pure res
+
 
 def cartesiHandler [Deserialize t] (handleInspect : (Inspect t) -> App Status) (handleAdvance: (Advance t) -> App Status) : App Unit := do
   let mut status := Status.accept
