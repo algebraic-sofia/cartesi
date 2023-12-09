@@ -1,0 +1,36 @@
+{"version": 6,
+ "packagesDir": "lake-packages",
+ "packages":
+ [{"git":
+   {"url": "https://github.com/algebraic-sofia/soda.git",
+    "subDir?": null,
+    "rev": "41c34bb9472b700dd6682dd37f3f0dfae45ed947",
+    "opts": {},
+    "name": "soda",
+    "inputRev?": null,
+    "inherited": false}},
+  {"git":
+   {"url": "https://github.com/algebraic-sofia/requests.git",
+    "subDir?": null,
+    "rev": "9718f2a76de66ad71e22dc21b26c5b7ce0a4f7ac",
+    "opts": {},
+    "name": "requests",
+    "inputRev?": null,
+    "inherited": false}},
+  {"git":
+   {"url": "https://github.com/algebraic-sofia/JSON.git",
+    "subDir?": null,
+    "rev": "dc999936978d876d0006123c5ec0156f5b0fc334",
+    "opts": {},
+    "name": "JSON",
+    "inputRev?": null,
+    "inherited": false}},
+  {"git":
+   {"url": "https://github.com/KislyjKisel/Socket.lean.git",
+    "subDir?": null,
+    "rev": "9c7ee20ba007fc3698651a00f1d608b9ee698b05",
+    "opts": {},
+    "name": "Socket",
+    "inputRev?": null,
+    "inherited": true}}],
+ "name": "Cartesi"}
